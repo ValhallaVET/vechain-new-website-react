@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import { Container, Row, Col } from '../Layout';
-import { Logo } from '../Icons';
+import logo from '../Header/logo.svg';
 
 import bg from './bg.png';
 
@@ -56,7 +56,7 @@ const Section = styled.div`
 const LogoContainer = styled.div`
   display: none;
 
-  svg {
+  img {
     width: 100%;
   }
 
@@ -77,16 +77,46 @@ class Footer extends Component {
           <Row>
             <Col lg={4}>
               <Section>
+                <LogoContainer>
+                  <img src={logo} />
+                </LogoContainer>
               </Section>
             </Col>
             <Col lg={4}>
               <Section>
                 <Title>Contact</Title>
+                <Row>
+                  <Col lg={6}>
+                    <span>Business Development:</span>
+                    <a href="#">bd@vechain.com</a>
+                    <span>Recruitment:</span>
+                    <a href="#">hr@vechain.com</a>
+                    <span>VeResearch Program:</span>
+                    <a href="#">veresearch@vechain.com</a>
+                  </Col>
+                  <Col lg={6}>
+                    <span>Media:</span>
+                    <a href="#">press@vechain.com</a>
+                    <span>Others:</span>
+                    <a href="#">info@vechain.com</a>
+                  </Col>
+                </Row>
+                <a href="tel:+65090379543">+65 (0) 9037 9543</a>
+                <address>
+                  7 Straits View, Marina One East Tower, #05-01, Singapore, 018936
+                </address>
               </Section>
             </Col>
             <Col lg={4}>
               <Section>
                 <Title>VeChain Newsletter</Title>
+                <form>
+                  <label htmlFor="email">Enter your email to join our Newsletter now!</label>
+                  <div>
+                    <input id="email" type="email" name="email" placeholder="Your Email" />
+                    <input type="submit" value="Join Now" />
+                  </div>
+                </form>
               </Section>
             </Col>
           </Row>

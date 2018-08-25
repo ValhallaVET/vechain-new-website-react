@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MenuButton from '../MenuButton';
 import styled from 'styled-components';
 
 const Wrapper = styled.nav`
@@ -33,11 +34,9 @@ class Nav extends Component {
     return (
       <Wrapper>
         <span>Menu</span>
-        <Button>
-          <div id="element"></div>
-        </Button>
+        <MenuButton />
       </Wrapper>
-    )
+    );
   }
 }
 

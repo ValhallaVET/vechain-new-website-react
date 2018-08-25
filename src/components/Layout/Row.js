@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
 
-  ${ ({ middle }) => middle && `align-items: center;` }
+  ${ ({ middle }) => middle && css` 
+    align-items: center;
+  `}
 
-  ${ ({ wrap }) => wrap && `
+  ${ ({ wrap }) => wrap && css`
     flex-direction: row;
     flex-wrap: wrap;
   ` }

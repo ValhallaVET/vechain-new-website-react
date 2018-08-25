@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Button from '../Button';
+import { Button } from '../Button';
 
 import { Container, InnerContainer, Row, Col } from '../Layout';
 import UseCase from '../UseCase';
@@ -35,21 +35,31 @@ const ModifiedCol = styled(Col)`
   `}
 `;
 
+const Header = styled.div`
+  text-align: center;
+`;
+
+const Footer = styled.div`
+  text-align: center;
+`;
+
 class UseCases extends Component {
   render() {
     return (
       <Wrapper>
         <Container>
           <InnerContainer>
-            <h4>Featured use cases</h4>
+            <Header>
+              <h4>Featured use cases</h4>
+            </Header>
             <ModifiedRow wrap>
-              <ModifiedCol sm={1} lg={6}>
+              <ModifiedCol sm={12} lg={6}>
                 <UseCase 
                   image={coldChain}
                   title="Cold-chain Logistics"
                   content="VeChain’s cold-chain logistics solution uses proprietary IoT devices to track key metrics throughout the entire journey. VeChain embeds data management and sharing in every process, making cold-chain logistics transparent, regulated, secure and reliable." />
               </ModifiedCol>
-              <ModifiedCol sm={1} lg={6}>
+              <ModifiedCol sm={12} lg={6}>
                 <UseCase 
                   image={automobile}
                   title="Automobile"
@@ -57,21 +67,23 @@ class UseCases extends Component {
               </ModifiedCol>
             </ModifiedRow>
             <ModifiedRow>
-              <ModifiedCol sm={1} lg={6}>
+              <ModifiedCol sm={12} lg={6}>
                 <UseCase 
                   image={luxury}
                   title="Luxury & Fashion"
                   content="VeChain embeds smartchips within luxury goods, so brands can monitor their sales channels in realtime to prevent illegal overstock trading. Meanwhile, consumers can verify the authenticity of the luxury products. VeChain puts control back into the hands of brands, making luxury trail transparent, seamless and data-driven." />
               </ModifiedCol>
-              <ModifiedCol sm={1} lg={6}>
+              <ModifiedCol sm={12} lg={6}>
                 <UseCase 
                   image={medical}
                   title="Medical & Healthcare"
                   content="VeChain’s blockchain solution can track end-to-end production processes and use of medical device. With the patient’s authorization, VeChain can enable patients to securely share their biometric data with their doctors to enable realtime monitoring. VeChain makes the production and use of medical devices safer, better regulated, efficient" />
               </ModifiedCol>
             </ModifiedRow>
+            <Footer>
+              <Button primary>More Use Cases</Button>
+            </Footer>
           </InnerContainer>
-          <Button primary>More Use Cases</Button>
         </Container>
       </Wrapper>
     );

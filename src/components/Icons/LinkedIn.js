@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const LinkedIn = () => (
   <svg width="21" height="20" xmlns="http://www.w3.org/2000/svg">

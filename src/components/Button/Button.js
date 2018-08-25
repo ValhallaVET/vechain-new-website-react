@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const Wrapper = styled.button`
   border: none;
@@ -15,7 +15,7 @@ const Wrapper = styled.button`
     width: auto;
   }
 
-  ${({ primary }) => primary && `
+  ${({ primary }) => primary && css`
     background-color: transparent;
     border: 4px solid #6B87A4;
     color: #6B87A4;
@@ -29,7 +29,7 @@ const Wrapper = styled.button`
     }
   `}
 
-  ${({ secondary }) => secondary && `
+  ${({ secondary }) => secondary && css`
     background-image: linear-gradient(-49deg, #140772 0%, #070039 31%, #170C64 49%, #0C2F8F 71%, #698DC6 100%);
     color: #ffffff;
     font-weight: 700;
@@ -42,13 +42,13 @@ const Wrapper = styled.button`
     }
   `}
 
-  ${({ special }) => special && `
+  ${({ special }) => special && css`
     font-family: 'Oleo Script Swash Caps', cursive !important;
     font-size: 2em !important;
     outline: none;
   `}
 
-  ${({ light }) => light && `
+  ${({ light }) => light && css`
     align-items: center;
     background-color: rgba(215, 224, 233, 0.32);
     color: #E2689A;
@@ -60,9 +60,14 @@ const Wrapper = styled.button`
     letter-spacing: 4px;
     padding: 5px 25px 5px 3px;
     width: auto;
+
+    &:hover {
+      background-image: linear-gradient(-137deg, #00C0FF 0%, #0BB3EB 21%, #1973E0 70%, #5419E0 100%);
+      color: #ffffff;
+    }
   `}
 
-  ${({ subdued }) => subdued && `
+  ${({ subdued }) => subdued && css`
     align-items: center;
     background: linear-gradient(153deg, rgba(27, 59, 216, 0.150) 0%, rgba(23, 108, 224, 0.15) 31%, rgba(11, 146, 231, 0.15) 49%, rgba(11, 182, 235, 0.15) 71%, rgba(0, 224, 242, 0.15) 100%);
     border: none;

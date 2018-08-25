@@ -4,19 +4,26 @@ import styled from 'styled-components';
 import Video from '../Video';
 import Header from '../Header';
 import Subtitle from '../Subtitle';
+import { List, Item } from '../List';
 import { Container, Row, Col } from '../Layout';
-import Button from '../Button';
+import { Button, ButtonImage } from '../Button';
+import { Paper, Github } from '../Icons';
 
 import heroBg from './hero-bg.png';
 import heroMainImage from './hero-main-image.png';
+import aim from './aim.png';
+import blob from './blob.png';
+import shield from './shield.png';
 
-const Section = styled.section`
+const Wrapper = styled.div`
   background-image: url(${heroBg});
   background-repeat: no-repeat;
   position: relative;
+  padding-top: 0;
 
   @media all and (min-width: 75em) {
     background-size: cover;
+    padding-top: 62px;
   }
 `;
 
@@ -58,58 +65,78 @@ const MainContent = styled.div`
   }
 `;
 
+const ContentTitle = styled.h2`
+  color: rgba(255, 255, 255, 0.8);
+
+  @media all and (min-width: 75em) {
+    color: #303F4D;
+  }
+`;
+
 class Hero extends Component {
   render() {
     return (
-      <Section>
+      <Wrapper>
         <Container>
           <Header />
           <Row middle>
-            <Col sm={1} lg={6}>
+            <Col sm={12} lg={6}>
               <Title>VeChain Thor the Blockchain X</Title>
               <Subtitle light>
                 VeChain is a leading global enterprise <br />  level public blockchain platform.
               </Subtitle>
               <Row>
-                <Col sm={1} lg={6}>
-                  <Button subdued>Development Plan & Whitepaper</Button>
+                <Col sm={12} lg={6}>
+                  <Button subdued>
+                    <ButtonImage width={21}>
+                      <Paper />
+                    </ButtonImage>
+                    Development Plan & Whitepaper
+                  </Button>
                 </Col>
-                <Col sm={1} lg={6}>
-                  <Button subdued>VeChain Thor Github</Button>
+                <Col sm={12} lg={6}>
+                  <Button subdued>
+                    <ButtonImage width={21}>
+                      <Github />
+                    </ButtonImage>
+                    VeChain Thor Github
+                  </Button>
                 </Col>
               </Row>
             </Col>
-            <Col sm={1} lg={6}>
+            <Col sm={12} lg={6}>
               <Video />
             </Col>
           </Row>
           <Row middle>
-            <Col sm={1} lg={6}>
+            <Col sm={12} lg={6}>
               <MainImage>
                 <img src={heroMainImage} alt="VeChain Hero" />
               </MainImage>
             </Col>
-            <Col sm={1} lg={6}>
+            <Col sm={12} lg={6}>
               <MainContent>
                 <h4>What is VeChain?</h4>
-                <h2>Lorem ipsum dolor sit amet consectetur adipiscing.</h2>
-                <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                <ul>
-                  <li>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</p>
-                  </li>
-                  <li>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-                  </li>
-                  <li>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                  </li>
-                </ul>
+                <ContentTitle>
+                  VeChain is a leading global blockchain platform designed for widespread enterprise adoption. 
+                </ContentTitle>
+                <p>VeChain combines advanced IoT integration with a secure governance structure and an innovative economic model to pioneer real world solutions. From streamlining corporate supply chains, to verifying the authenticity of retail inventories, or monitoring the lifespan of medical vaccines, VeChain provides the tools to solve a number of industry bottlenecks and pain points.</p>
+                <List>
+                  <Item image={blob} width={32} height={32}>
+                    <p>Scalability: Offering a high TPS (transactions per second), industry specific dApps, and a ground-breaking Multi-Party Payment Protocol, VeChain can offer solutions for small businesses or multinational corporations.</p>
+                  </Item>
+                  <Item image={shield} width={23} height={29}>
+                    <p>Security: VeChain’s Proof of Authority consensus model anchors the blockchain behind some of the most reputable firms in the industry, building a decentralized network that guarantees trust for both clients and consumers.</p>
+                  </Item>
+                  <Item image={aim} width={22} height={22}>
+                    <p>Speed: With blocks being processed every 10 seconds, the blockchain ensures near-instant confirmation, freeing users from the constraints of traditional blockchains.</p>
+                  </Item>
+                </List>
               </MainContent>
             </Col>
           </Row>
         </Container>
-      </Section>
+      </Wrapper>
     );
   }
 }

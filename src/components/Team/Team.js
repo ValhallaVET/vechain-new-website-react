@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
+import { Button } from '../Button';
 import TeamMembers from '../TeamMembers';
 import { InnerContainer } from '../Layout';
 import logo from '../Header/logo.svg';
@@ -28,16 +29,31 @@ const Image = styled.div`
   }
 `;
 
+const Header = styled.div`
+  text-align: center;
+`;
+
+const Footer = styled.div`
+  text-align: center;
+  margin-bottom: 50px;
+`;
+
 class Team extends Component {
   render() {
     return (
       <Wrapper>
         <Image>
-          <img src={logo} />
+          <img src={logo} alt="VeChain Logo" />
         </Image>
         <InnerContainer>
-          <h4>Core Team</h4>
+          <Header>
+            <h4>Core Team</h4>
+          </Header>
           <TeamMembers />
+          <Footer>
+            <Button secondary>Board Of Advisors</Button>
+            <Button primary style={{ marginLeft: 20 }}>Steering Committee</Button>
+          </Footer>
         </InnerContainer>
       </Wrapper>
     );

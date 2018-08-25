@@ -54,12 +54,12 @@ class App extends Component {
     return (
       <Wrapper>
         <Row middle>
-          <Col sm={1} lg={6}>
+          <Col sm={12} lg={6}>
             <Image>
-              <img src={phone} />
+              <img src={phone} alt="VeChain app example" />
             </Image>
           </Col>
-          <Col sm={1} lg={6}>
+          <Col sm={12} lg={6}>
             <Info>
               <h4>Download Today</h4>
               <h3>VeChainThor Mobile Wallet</h3>
@@ -67,12 +67,12 @@ class App extends Component {
               <Row>
                 <Col sm={6} lg={6}>
                   <AppLink>
-                    <img src={appStore} />
+                    <img src={appStore} alt="VeChain Apple Store" />
                   </AppLink>
                 </Col>
                 <Col sm={6} lg={6}>
                   <AppLink>
-                    <img src={googlePlay} />
+                    <img src={googlePlay} alt="VeChain Google Play" />
                   </AppLink>
                 </Col>
               </Row>

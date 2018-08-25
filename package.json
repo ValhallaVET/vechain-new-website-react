@@ -6,9 +6,12 @@
     "lodash": "^4.17.10",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "react-lottie": "^1.2.3",
     "react-media": "^1.8.0",
     "react-scripts": "1.1.5",
-    "styled-components": "^3.4.5"
+    "sanitize.css": "^7.0.0",
+    "styled-components": "^3.4.5",
+    "webfontloader": "^1.6.28"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -103,7 +103,10 @@ class TeamMember extends Component {
     return (
       <Wrapper>
         <Header>
-          <img src={image} onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave} />
+          <img src={image}
+            alt={name}
+            onMouseEnter={this.mouseEnter}
+            onMouseLeave={this.mouseLeave} />
           { isHovered && 
             <Content>
               <p>{ content }</p>

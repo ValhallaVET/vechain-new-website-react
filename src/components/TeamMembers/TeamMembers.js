@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import _ from 'lodash';
 import styled from 'styled-components';
 
 import TeamMember from '../TeamMember';

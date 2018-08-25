@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const Logo = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1888" viewBox="0 0 2000 1888">

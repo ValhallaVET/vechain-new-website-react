@@ -1,3 +1,40 @@
+@font-face {
+  font-family: "ProximaNova";
+  src: url("./fonts/ProximaNova-Light.otf") format("opentype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url("./fonts/ProximaNova-Regular.otf") format("opentype");
+  font-weight: normal;
+}
+
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url("./fonts/ProximaNova-Semibold.otf") format("opentype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url("./fonts/ProximaNova-Bold.otf") format("opentype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url("./fonts/ProximaNova-Extrabold.otf") format("opentype");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url("./fonts/ProximaNova-Black.otf") format("opentype");
+  font-weight: 900;
+}
+
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -5,7 +42,38 @@
 }
 
 body {
+  color: #6B87A4;
+  font-family: "ProximaNova" sans-serif;
+  font-size: 14px;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+}
+
+h1 {
+  font-weight: 800;
+}
+
+h2 {
+  color: #303F4D;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+h3 {
+  color: #303F4D;
+  font-size: 1.5em;
+}
+
+h4 {
+  color: #E2689A;
+  font-weight: 800; 
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif; 
+  letter-spacing: 0.279em;
+  text-transform: uppercase;
+}
+
+p {
+  color: #6B87A4;
+  font-size: 1.125em;
+  line-height: 1.8em;
 }

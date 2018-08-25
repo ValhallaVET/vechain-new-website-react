@@ -10,6 +10,7 @@ import futureCap from './future-cap.png';
 const Wrapper = styled.div`
   background-color: #ffffff;
   margin: 0 auto;
+  margin-top: 40px;
   max-width: 80vw;
   position: relative;
   z-index: 1;

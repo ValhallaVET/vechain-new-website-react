@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+import { Button, ButtonImage } from '../Button';
 import styled from 'styled-components';
+
+import playBtn from './play-btn.png';
 
 const Wrapper = styled.div`
   background: #FFFFFF;
@@ -55,7 +58,12 @@ class UseCase extends Component {
         <h3>{ title }</h3>
         <p>{ content }</p>
         <Footer>
-          <button>Watch</button>
+          <Button light>
+            <ButtonImage width={50}>
+              <img src={playBtn} alt="Video Play Button" />
+            </ButtonImage>
+            Watch
+          </Button>
         </Footer>
       </Wrapper>
     );
