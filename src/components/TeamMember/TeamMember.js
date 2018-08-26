@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import Tilt from 'react-tilt';
 
 import { LinkedIn } from '../Icons';
 
@@ -98,15 +99,17 @@ class TeamMember extends Component {
 
   render() {
     const { isHovered } = this.state;
-    const { name, title, image, content } = this.props;
+    const { name, title, image, content, linkedin } = this.props;
 
     return (
       <Wrapper>
         <Header>
-          <img src={image}
-            alt={name}
-            onMouseEnter={this.mouseEnter}
-            onMouseLeave={this.mouseLeave} />
+          <Tilt options={{ max: 15, perspective: 1000, scale: 1.08, axis: "X" }}>
+            <img src={image}
+              alt={name}
+              onMouseEnter={this.mouseEnter}
+              onMouseLeave={this.mouseLeave} />
+          </Tilt>
           { isHovered && 
             <Content>
               <p>{ content }</p>
@@ -116,9 +119,11 @@ class TeamMember extends Component {
         <div>
           <p>{ name }</p>
           <p>{ title }</p>
-          <a href="#">
-            <LinkedIn />
-          </a>
+          { linkedin &&
+            <a href={linkedin} target="_blank">
+              <LinkedIn />
+            </a>
+          }
         </div>
       </Wrapper>
     );

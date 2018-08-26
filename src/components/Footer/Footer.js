@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
+import Input from '../Input';
+import EndFooter from '../EndFooter';
 import { Container, Row, Col } from '../Layout';
 import logo from '../Header/logo.svg';
 
@@ -66,7 +68,16 @@ const LogoContainer = styled.div`
 `;
 
 const Title = styled.h4`
+  color: #ffffff;
+  font-size: 1.500em;
+  font-family: 'Lato', sans-serif;
+  margin-top: 0;
+  text-transform: uppercase;
+`;
 
+const Label = styled.label`
+  display: block;
+  margin-bottom: 25px;
 `;
 
 class Footer extends Component {
@@ -78,7 +89,7 @@ class Footer extends Component {
             <Col lg={4}>
               <Section>
                 <LogoContainer>
-                  <img src={logo} />
+                  <img src={logo} alt="Footer Logo" />
                 </LogoContainer>
               </Section>
             </Col>
@@ -88,17 +99,17 @@ class Footer extends Component {
                 <Row>
                   <Col lg={6}>
                     <span>Business Development:</span>
-                    <a href="#">bd@vechain.com</a>
+                    <a href="mailto:bd@vechain.com">bd@vechain.com</a>
                     <span>Recruitment:</span>
-                    <a href="#">hr@vechain.com</a>
+                    <a href="mailto:hr@vechain.com">hr@vechain.com</a>
                     <span>VeResearch Program:</span>
-                    <a href="#">veresearch@vechain.com</a>
+                    <a href="mailto:veresearch@vechain.com">veresearch@vechain.com</a>
                   </Col>
                   <Col lg={6}>
                     <span>Media:</span>
-                    <a href="#">press@vechain.com</a>
+                    <a href="mailto:press@vechain.com">press@vechain.com</a>
                     <span>Others:</span>
-                    <a href="#">info@vechain.com</a>
+                    <a href="mailto:info@vechain">info@vechain.com</a>
                   </Col>
                 </Row>
                 <a href="tel:+65090379543">+65 (0) 9037 9543</a>
@@ -111,16 +122,14 @@ class Footer extends Component {
               <Section>
                 <Title>VeChain Newsletter</Title>
                 <form>
-                  <label htmlFor="email">Enter your email to join our Newsletter now!</label>
-                  <div>
-                    <input id="email" type="email" name="email" placeholder="Your Email" />
-                    <input type="submit" value="Join Now" />
-                  </div>
+                  <Label htmlFor="email">Enter your email to join our Newsletter now!</Label>
+                  <Input />
                 </form>
               </Section>
             </Col>
           </Row>
         </Container>
+        <EndFooter />
       </Wrapper>
     );
   }

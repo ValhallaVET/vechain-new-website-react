@@ -18,6 +18,7 @@ import shield from './shield.png';
 const Wrapper = styled.div`
   background-image: url(${heroBg});
   background-repeat: no-repeat;
+  margin-top: -10px;
   position: relative;
   padding-top: 0;
 
@@ -55,10 +56,12 @@ const MainImage = styled.div`
 
 const MainContent = styled.div`
   margin-top: 50px;
+  margin-bottom: 50px;
   text-align: center;
 
   @media all and (min-width: 75em) {
     text-align: left;
+    margin-bottom: 0;
     margin-top: 100px;
     padding-left: 50px;
     padding-right: 20px;
@@ -70,6 +73,14 @@ const ContentTitle = styled.h2`
 
   @media all and (min-width: 75em) {
     color: #303F4D;
+  }
+`;
+
+const ModifiedButton = styled(Button)`
+  margin-top: 20px;
+
+  @media all and (min-width: 75em) {
+    margin-top: 0;
   }
 `;
 
@@ -87,20 +98,24 @@ class Hero extends Component {
               </Subtitle>
               <Row>
                 <Col sm={12} lg={6}>
-                  <Button subdued>
-                    <ButtonImage width={21}>
-                      <Paper />
-                    </ButtonImage>
-                    Development Plan & Whitepaper
-                  </Button>
+                  <a href="https://cdn.vechain.com/vechainthor_development_plan_and_whitepaper_en_v1.0.pdf" target="_blank" rel="noopener noreferrer">
+                    <ModifiedButton subdued>
+                      <ButtonImage width={21}>
+                        <Paper />
+                      </ButtonImage>
+                      Development Plan & Whitepaper
+                    </ModifiedButton>
+                  </a>
                 </Col>
                 <Col sm={12} lg={6}>
-                  <Button subdued>
-                    <ButtonImage width={21}>
-                      <Github />
-                    </ButtonImage>
-                    VeChain Thor Github
-                  </Button>
+                  <a href="https://github.com/vechain/thor" target="_blank" rel="noopener noreferrer">
+                    <ModifiedButton subdued style={{ marginBottom: 50 }}>
+                      <ButtonImage width={21}>
+                        <Github />
+                      </ButtonImage>
+                      VeChain Thor Github
+                    </ModifiedButton>
+                  </a>
                 </Col>
               </Row>
             </Col>

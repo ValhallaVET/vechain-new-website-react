@@ -36,6 +36,20 @@ const Header = styled.div`
 const Footer = styled.div`
   text-align: center;
   margin-bottom: 50px;
+
+  button {
+    margin-bottom: 30px;
+  }
+
+  @media all and (min-width: 75em) {
+    button {
+      margin-bottom: 0;
+
+      & ~ button {
+        margin-left: 30px;
+      }
+    }
+  }
 `;
 
 class Team extends Component {
@@ -52,7 +66,7 @@ class Team extends Component {
           <TeamMembers />
           <Footer>
             <Button secondary>Board Of Advisors</Button>
-            <Button primary style={{ marginLeft: 20 }}>Steering Committee</Button>
+            <Button primary>Steering Committee</Button>
           </Footer>
         </InnerContainer>
       </Wrapper>

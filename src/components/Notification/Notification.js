@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import styled from 'styled-components';
+
+import { EasterEggOpener, Valhalla } from '../EasterEgg';
 import { Container } from '../Layout';
 
 const Wrapper = styled.div`
@@ -30,13 +32,34 @@ const Wrapper = styled.div`
 `;
 
 class Notification extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      isOpen: false,
+    };
+
+    this.toggleEasterEgg = this.toggleEasterEgg.bind(this);
+  }
+
+  toggleEasterEgg() {
+    this.setState(({ isOpen }) => ({ isOpen: !isOpen }));
+  }
+
   render() {
+    const { isOpen } = this.state;
     return (
-      <Wrapper>
-        <Container>
-          <p>The VeChainThor platform is now live. Visit GitHub and download the source code</p>
-        </Container>
-      </Wrapper>
+      <Fragment>
+        <Wrapper>
+          <Container>
+            <p>The VeChainThor platform is now live. Visit GitHub and download the source code</p>
+          </Container>
+          <EasterEggOpener onOpen={this.toggleEasterEgg} />
+        </Wrapper>
+        { isOpen &&
+          <Valhalla openToggle={this.toggleEasterEgg} key="easter-egg" />
+        }
+      </Fragment>
     );
   }
 }

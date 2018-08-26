@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Media from 'react-media';
 
 import Notification from './components/Notification';
 import Hero from './components/Hero';
@@ -13,7 +14,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Notification />
+        <Media 
+          query="(min-width: 75em)"
+          render={() => <Notification /> } />
         <Hero />
         <Featured />
         <UseCases />

@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import Lottie from 'react-lottie';
 import data from './data.json';
-import love from './love.json';
+
+const Hamburger = styled.div`
+  cursor: pointer;
+`;
 
 class MenuButton extends Component {
   static defaultOptions ={
@@ -14,26 +18,11 @@ class MenuButton extends Component {
     }
   }
 
-  constructor() {
-    super();
-
-    this.state = {
-      isClicked: false,
-    };
-
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick() {
-    console.log('clicked')
-  }
-
   render() {
     return (
-      <Lottie 
-        onClick={this.handleClick}
-        options={MenuButton.defaultOptions} 
-        width={50} />
+      <Hamburger>
+        <Lottie options={MenuButton.defaultOptions} width={50} />
+      </Hamburger>
     )
   }
 }

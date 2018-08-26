@@ -25,7 +25,7 @@ class Video extends Component {
     return (
       <Wrapper>
         <video controls poster={poster}>
-          <source src="" type="video/mp4" />
+          <source src="https://res.cloudinary.com/hacrdfjr5/video/upload/v1535250797/VeChain_An_Introduction.mp4" type="video/mp4" />
         </video>
       </Wrapper>
     );

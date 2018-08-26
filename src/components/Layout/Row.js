@@ -9,7 +9,7 @@ const Wrapper = styled.div`
     align-items: center;
   `}
 
-  ${ ({ wrap }) => wrap && css`
+  ${ ({ willwrap }) => willwrap && css`
     flex-direction: row;
     flex-wrap: wrap;
   ` }

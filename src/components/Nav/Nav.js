@@ -16,19 +16,6 @@ const Wrapper = styled.nav`
   }
 `;
 
-const Button = styled.a`
-  cursor: pointer;
-  width: 25px;
-
-  img {
-    width: 100%;
-  }
-
-  @media all and (min-width: 75em) {
-    width: 50px;
-  }
-`;
-
 class Nav extends Component {
   render() {
     return (

@@ -9,8 +9,8 @@ import registerServiceWorker from './registerServiceWorker';
 WebFont.load({
   google: {
     families: [
-      'Lato:400,700', 'sans-serif',
-      'Oleo+Script+Swash+Caps'
+      'Lato:400,700',
+      'Oleo Script Swash Caps'
     ],
   },
 });

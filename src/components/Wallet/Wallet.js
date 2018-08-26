@@ -49,6 +49,12 @@ const AppLink = styled.a`
   }
 `;
 
+const ModifiedRow = styled(Row)`
+  @media all and (min-width: 75em) {
+    margin-top: 40px;
+  }
+`;
+
 class App extends Component {
   render() {
     return (
@@ -64,18 +70,18 @@ class App extends Component {
               <h4>Download Today</h4>
               <h3>VeChainThor Mobile Wallet</h3>
               <p>VeChainThor Wallet is a light mobile wallet app. We aim to provide users with a powerful, secure, simple and fully functional portal to the VeChainThor blockchain.</p>
-              <Row>
-                <Col sm={6} lg={6}>
-                  <AppLink>
+              <ModifiedRow>
+                <Col sm={6} lg={4}>
+                  <AppLink href="https://itunes.apple.com/au/app/vechainthor/id1397679485?mt=8" target="_blank">
                     <img src={appStore} alt="VeChain Apple Store" />
                   </AppLink>
                 </Col>
-                <Col sm={6} lg={6}>
-                  <AppLink>
+                <Col sm={6} lg={4}>
+                  <AppLink href="https://play.google.com/store/apps/details?id=com.vechain.wallet" target="_blank">
                     <img src={googlePlay} alt="VeChain Google Play" />
                   </AppLink>
                 </Col>
-              </Row>
+              </ModifiedRow>
             </Info>
           </Col>
         </Row>

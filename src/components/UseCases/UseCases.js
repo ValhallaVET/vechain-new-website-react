@@ -37,10 +37,20 @@ const ModifiedCol = styled(Col)`
 
 const Header = styled.div`
   text-align: center;
+  margin: 50px 0;
+
+  @media all and (min-width: 75em) {
+    margin: 0;
+  }
 `;
 
 const Footer = styled.div`
+  margin: 50px 0;
   text-align: center;
+
+  @media all and (min-width: 75em) {
+    margin: 0;
+  }
 `;
 
 class UseCases extends Component {
@@ -52,17 +62,19 @@ class UseCases extends Component {
             <Header>
               <h4>Featured use cases</h4>
             </Header>
-            <ModifiedRow wrap>
+            <ModifiedRow willwrap>
               <ModifiedCol sm={12} lg={6}>
                 <UseCase 
                   image={coldChain}
                   title="Cold-chain Logistics"
+                  video="https://www.youtube.com/embed/__yfks8BK2A"
                   content="VeChain’s cold-chain logistics solution uses proprietary IoT devices to track key metrics throughout the entire journey. VeChain embeds data management and sharing in every process, making cold-chain logistics transparent, regulated, secure and reliable." />
               </ModifiedCol>
               <ModifiedCol sm={12} lg={6}>
                 <UseCase 
                   image={automobile}
                   title="Automobile"
+                  video="https://www.youtube.com/embed/Ojq69EUJHlw"
                   content="VeChain creates a digital passport of a vehicle recording all data including repair history, insurance, registration and even driver behaviour throughout its lifecycle. VeChain puts data into the hands of owners, making data management comprehensive, accessible and transparent." />
               </ModifiedCol>
             </ModifiedRow>
@@ -71,12 +83,14 @@ class UseCases extends Component {
                 <UseCase 
                   image={luxury}
                   title="Luxury & Fashion"
+                  video="https://www.youtube.com/embed/RhZ7CMYrpIw"
                   content="VeChain embeds smartchips within luxury goods, so brands can monitor their sales channels in realtime to prevent illegal overstock trading. Meanwhile, consumers can verify the authenticity of the luxury products. VeChain puts control back into the hands of brands, making luxury trail transparent, seamless and data-driven." />
               </ModifiedCol>
               <ModifiedCol sm={12} lg={6}>
                 <UseCase 
                   image={medical}
                   title="Medical & Healthcare"
+                  video="https://www.youtube.com/embed/BmmpSu2NBc0"
                   content="VeChain’s blockchain solution can track end-to-end production processes and use of medical device. With the patient’s authorization, VeChain can enable patients to securely share their biometric data with their doctors to enable realtime monitoring. VeChain makes the production and use of medical devices safer, better regulated, efficient" />
               </ModifiedCol>
             </ModifiedRow>
