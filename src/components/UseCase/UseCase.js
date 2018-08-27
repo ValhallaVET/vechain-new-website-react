@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Tilt from 'react-tilt';
 import styled from 'styled-components';
 
 import { Button, ButtonImage } from '../Button';
@@ -8,14 +7,13 @@ import SimpleDialog from '../SimpleDialog';
 import bg from './bg.png';
 import playBtn from './play-btn.png';
 
-const Wrapper = styled(Tilt)`
+const Wrapper = styled.div`
   background: #FFFFFF;
   border-radius: 5px;
   box-shadow: 0 32px 42px 0 rgba(26,22,44,0.05);
   padding: 20px;
   text-align: center;
   margin-bottom: 50px;
-  transform-style: preserve-3d;
   width: 100%;
 
   @media all and (min-width: 75em) {
@@ -55,7 +53,7 @@ const Footer = styled.div`
       margin: initial;
     }
   }
-`
+`;
 
 class UseCase extends Component {
   constructor() {
@@ -82,7 +80,7 @@ class UseCase extends Component {
     const { image, title, content, video } = this.props;
 
     return (
-      <Wrapper options={{ max: 5, perspective: 5000, scale: 1.01 }}>
+      <Wrapper>
         <Inner>
           <Image>
             <Inner>
@@ -99,13 +97,13 @@ class UseCase extends Component {
               Watch
             </Button>
             <SimpleDialog open={open} onClose={this.handleClose}>
-              <iframe 
-                width="560" 
-                height="315" 
-                src={video} 
+              <iframe
+                width="560"
+                height="315"
+                src={video}
                 title={title}
-                frameBorder="0" 
-                allow="autoplay; encrypted-media" 
+                frameBorder="0"
+                allow="autoplay; encrypted-media"
                 allowFullScreen></iframe>
             </SimpleDialog>
           </Footer>
