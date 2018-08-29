@@ -66,8 +66,8 @@ h3 {
 
 h4 {
   color: #E2689A;
-  font-weight: 800; 
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif; 
+  font-weight: 800;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   letter-spacing: 0.279em;
   text-transform: uppercase;
 }
@@ -84,10 +84,10 @@ a[href^="tel:"] {
 
 a {
   text-decoration: none;
+}
 
-  &:hover {
-    color: inherit;
-  }
+a:hover {
+  color: inherit;
 }
 
 address {

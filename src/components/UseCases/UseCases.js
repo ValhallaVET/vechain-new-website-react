@@ -64,14 +64,14 @@ class UseCases extends Component {
             </Header>
             <ModifiedRow willwrap>
               <ModifiedCol sm={12} lg={6}>
-                <UseCase 
+                <UseCase
                   image={coldChain}
                   title="Cold-chain Logistics"
                   video="https://www.youtube.com/embed/__yfks8BK2A"
                   content="VeChain’s cold-chain logistics solution uses proprietary IoT devices to track key metrics throughout the entire journey. VeChain embeds data management and sharing in every process, making cold-chain logistics transparent, regulated, secure and reliable." />
               </ModifiedCol>
               <ModifiedCol sm={12} lg={6}>
-                <UseCase 
+                <UseCase
                   image={automobile}
                   title="Automobile"
                   video="https://www.youtube.com/embed/Ojq69EUJHlw"
@@ -80,18 +80,18 @@ class UseCases extends Component {
             </ModifiedRow>
             <ModifiedRow>
               <ModifiedCol sm={12} lg={6}>
-                <UseCase 
+                <UseCase
                   image={luxury}
                   title="Luxury & Fashion"
                   video="https://www.youtube.com/embed/RhZ7CMYrpIw"
                   content="VeChain embeds smartchips within luxury goods, so brands can monitor their sales channels in realtime to prevent illegal overstock trading. Meanwhile, consumers can verify the authenticity of the luxury products. VeChain puts control back into the hands of brands, making luxury trail transparent, seamless and data-driven." />
               </ModifiedCol>
               <ModifiedCol sm={12} lg={6}>
-                <UseCase 
+                <UseCase
                   image={medical}
                   title="Medical & Healthcare"
                   video="https://www.youtube.com/embed/BmmpSu2NBc0"
-                  content="VeChain’s blockchain solution can track end-to-end production processes and use of medical device. With the patient’s authorization, VeChain can enable patients to securely share their biometric data with their doctors to enable realtime monitoring. VeChain makes the production and use of medical devices safer, better regulated, efficient" />
+                  content="VeChain’s blockchain solution can track end-to-end production processes and use of medical device. With the patient’s authorization, VeChain can enable patients to securely share their biometric data with their doctors to enable real-time monitoring. VeChain makes the production and use of medical devices safer, better regulated, efficient and reliable." />
               </ModifiedCol>
             </ModifiedRow>
             <Footer>

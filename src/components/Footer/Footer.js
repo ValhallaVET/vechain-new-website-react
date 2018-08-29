@@ -109,7 +109,9 @@ class Footer extends Component {
                     <span>Media:</span>
                     <a href="mailto:press@vechain.com">press@vechain.com</a>
                     <span>Others:</span>
-                    <a href="mailto:info@vechain">info@vechain.com</a>
+                    <a href="mailto:info@vechain.com">info@vechain.com</a>
+                    <span>Support:</span>
+                    <a href="mailto:support@vechain.com">support@vechain.com</a>
                   </Col>
                 </Row>
                 <a href="tel:+65090379543">+65 (0) 9037 9543</a>
