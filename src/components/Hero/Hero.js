@@ -92,9 +92,9 @@ class Hero extends Component {
           <Header />
           <Row middle>
             <Col sm={12} lg={6}>
-              <Title>VeChain Thor the Blockchain X</Title>
+              <Title>VeChain Thor <br /> The Blockchain X</Title>
               <Subtitle light>
-                VeChain is a leading global enterprise <br />  level public blockchain platform.
+                VeChain is a leading global enterprise <br /> level public blockchain platform.
               </Subtitle>
               <Row>
                 <Col sm={12} lg={6}>
@@ -133,7 +133,7 @@ class Hero extends Component {
               <MainContent>
                 <h4>What is VeChain?</h4>
                 <ContentTitle>
-                  VeChain is a leading global blockchain platform designed for widespread enterprise adoption. 
+                  VeChain is a leading global blockchain platform designed for widespread enterprise adoption.
                 </ContentTitle>
                 <p>VeChain combines advanced IoT integration with a secure governance structure and an innovative economic model to pioneer real world solutions. From streamlining corporate supply chains, to verifying the authenticity of retail inventories, or monitoring the lifespan of medical vaccines, VeChain provides the tools to solve a number of industry bottlenecks and pain points.</p>
                 <List>
