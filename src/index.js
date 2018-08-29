@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import App from './App';
+
+import WebFont from 'webfontloader';
 import 'sanitize.css';
 import './index.css';
-import App from './App';
-import WebFont from 'webfontloader';
+
 import registerServiceWorker from './registerServiceWorker';
 
 WebFont.load({
