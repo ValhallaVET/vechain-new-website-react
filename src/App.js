@@ -1,32 +1,14 @@
-import React, { Component } from 'react';
-import Media from 'react-media';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import Notification from './components/Notification';
-import Hero from './components/Hero';
-import Featured from './components/Featured';
-import UseCases from './components/UseCases';
-import Roadmap from './components/Roadmap';
-import Team from './components/Team';
-import Wallet from './components/Wallet';
-import Footer from './components/Footer';
+import Home from './scenes/Home';
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <Media 
-          query="(min-width: 75em)"
-          render={() => <Notification /> } />
-        <Hero />
-        <Featured />
-        <UseCases />
-        <Roadmap />
-        <Team />
-        <Wallet />
-        <Footer />
-      </div>
-    );
-  }
-}
+const App = () => (
+  <Router>
+    <Switch>
+      <Route exact path='/' component={Home} />
+    </Switch>
+  </Router>
+);
 
 export default App;
